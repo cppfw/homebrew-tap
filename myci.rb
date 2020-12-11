@@ -1,8 +1,8 @@
 class Myci < Formula
   desc "Helper CI scripts."
   homepage "https://github.com/cppfw/myci"
-  url "https://github.com/cppfw/myci/archive/0.1.77.tar.gz"
-  sha256 "aa83eed47f2a96b7a0ac3c5cce6500701ebc291233d8a2daae21f28095167caa"
+  url "https://github.com/cppfw/myci/archive/0.1.78.tar.gz"
+  sha256 "c8c86f36dfcd62b8037364fb7df5a6c1ddad5d39e0c996a47e0fbb0388b62d27"
 
   def install
     ENV['PATH'] += ':/usr/local/bin'
