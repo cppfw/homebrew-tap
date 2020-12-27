@@ -1,8 +1,8 @@
 class Libcssdom < Formula
   desc "C++ cross-platform CSS DOM library."
   homepage "https://github.com/cppfw/cssdom"
-  url "https://github.com/cppfw/cssdom/archive/0.1.12.tar.gz"
-  sha256 "7f85f6ed598b799e3d248d44589adf1175cbf0569e815c050b28c30c71c22437"
+  url "https://github.com/cppfw/cssdom/archive/0.1.13.tar.gz"
+  sha256 "2a8c0e54e3d42c4642279ff7d381bdbc29423e8ad3e2bed7bcca2105b2141371"
 
   depends_on "prorab" => :build
   depends_on "prorab-extra" => :build
