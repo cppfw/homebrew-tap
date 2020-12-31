@@ -1,8 +1,8 @@
 class Libpuu < Formula
   desc "C++ cross-platform puu parser library."
   homepage "https://github.com/cppfw/puu"
-  url "https://github.com/cppfw/puu/archive/0.1.24.tar.gz"
-  sha256 "d63dff315a0a216e22523a6aaf558c6ff6389a7f2c6a6b4e4bd093e3ccfb96d5"
+  url "https://github.com/cppfw/puu/archive/0.1.25.tar.gz"
+  sha256 "136738b9f732c0431a740b078089d1fd0d6743fb245eed7db3cd85324405e5a5"
 
   depends_on "prorab" => :build
   depends_on "libclargs" => :build
