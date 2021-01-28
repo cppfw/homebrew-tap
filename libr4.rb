@@ -1,8 +1,8 @@
 class Libr4 < Formula
   desc "C++ 3d math library."
   homepage "https://github.com/cppfw/r4"
-  url "https://github.com/cppfw/r4/archive/1.0.41.tar.gz"
-  sha256 "3a94dc690f70308fa1b85f350ad27d106db363757e0a4fbe9e461eb585e3fdfb"
+  url "https://github.com/cppfw/r4/archive/1.0.42.tar.gz"
+  sha256 "295ec6bd93cb97dbd0f7578a0342bc461cb5c237cf9035893a305c444b96d6ec"
 
   depends_on "prorab" => :build
   depends_on "prorab-extra" => :build
