@@ -1,8 +1,8 @@
 class Libmorda < Formula
   desc "C++ cross-platform OpenGL based GUI library."
   homepage "https://github.com/cppfw/morda"
-  url "https://github.com/cppfw/morda/archive/0.5.152.tar.gz"
-  sha256 "f3c75e181275cc98d122286b66f16f175a4ebb8ec22a110564811533e04fad85"
+  url "https://github.com/cppfw/morda/archive/0.5.153.tar.gz"
+  sha256 "4826c9b85d8c2aa24b38fbbefe81126ff8b63b26fc28d8f05381aa7fbbb93c16"
 
   depends_on "prorab" => :build
   depends_on "prorab-extra" => :build
