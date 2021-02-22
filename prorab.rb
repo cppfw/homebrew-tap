@@ -1,8 +1,8 @@
 class Prorab < Formula
   desc "GNU make based build system."
   homepage "https://github.com/cppfw/prorab"
-  url "https://github.com/cppfw/prorab/archive/1.16.0.tar.gz"
-  sha256 "887113d51bf6ad21afe3b28978b5923a478ce614b69fe8a46f4a3ca563adc4f6"
+  url "https://github.com/cppfw/prorab/archive/1.16.1.tar.gz"
+  sha256 "61609b5579e1fc79f8ddafe660a9e51f5dce61d7faf9a365dee95bb5c3fa9954"
 
   def install
     ENV['PATH'] += ':/usr/local/bin'
