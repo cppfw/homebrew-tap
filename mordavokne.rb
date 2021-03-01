@@ -1,8 +1,8 @@
 class Mordavokne < Formula
   desc "Intrusive C++ cross-platform OpenGL based GUI library."
   homepage "https://github.com/cppfw/mordavokne"
-  url "https://github.com/cppfw/mordavokne/archive/0.2.62.tar.gz"
-  sha256 "5b6b6a5058f5415c8ae6e55f86f65813487698a577d50252245f2c63d043d26d"
+  url "https://github.com/cppfw/mordavokne/archive/0.2.63.tar.gz"
+  sha256 "9134d8a3e290acd0791abeb3774ec7b7ac617db37a9b3a5cc2d1f0512c9e528e"
 
   depends_on "prorab" => :build
   depends_on "prorab-extra" => :build
