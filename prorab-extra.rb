@@ -1,8 +1,8 @@
 class ProrabExtra < Formula
   desc "GNU make based build system."
   homepage "https://github.com/cppfw/prorab-extra"
-  url "https://github.com/cppfw/prorab-extra/archive/0.2.15.tar.gz"
-  sha256 "34f87ff060655a6180c62d887449643f5f84f9dbe4eb9af2dd5d57ec2e2a192e"
+  url "https://github.com/cppfw/prorab-extra/archive/0.2.16.tar.gz"
+  sha256 "4f544ecee86e6ac9acc748bd5f5ab070467389d2ba6b59fcbdb2308bfde1338f"
 
   depends_on "prorab"
 
