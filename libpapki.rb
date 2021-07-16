@@ -1,8 +1,8 @@
 class Libpapki < Formula
   desc "C++ cross-platform file system library."
   homepage "https://github.com/cppfw/papki"
-  url "https://github.com/cppfw/papki/archive/1.0.105.tar.gz"
-  sha256 "b387172ee6726b5ba774789fe1e7989f630db63cc80dd5e79044b6a8efe0c12b"
+  url "https://github.com/cppfw/papki/archive/1.0.106.tar.gz"
+  sha256 "861ff7c12ad858c154e7987aa79d665ec19f4a01e4a063b899991fc870ff016d"
 
   depends_on "prorab" => :build
   depends_on "libutki"
@@ -10,7 +10,7 @@ class Libpapki < Formula
   
   def install
     ENV['PATH'] += ':/usr/local/bin'
-    system "make", "-f", "src/makefile", "install", "PREFIX=#{prefix}"
+    system "make", "--directory", "src", "install", "PREFIX=#{prefix}"
   end
 
   test do
