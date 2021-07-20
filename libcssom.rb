@@ -1,8 +1,8 @@
 class Libcssom < Formula
   desc "C++ cross-platform CSS DOM library."
   homepage "https://github.com/cppfw/cssom"
-  url "https://github.com/cppfw/cssom/archive/0.1.24.tar.gz"
-  sha256 "eeaff4e974685841f0abd532d0047c4d299fcf4beb7bff82f73ca3128354d0d2"
+  url "https://github.com/cppfw/cssom/archive/0.1.25.tar.gz"
+  sha256 "b1eb99f96da50af20229ab1f4d004c87b2363a1a564fbb5d4ee062bf4406bbdf"
 
   depends_on "prorab" => :build
   depends_on "prorab-extra" => :build
