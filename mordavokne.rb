@@ -1,8 +1,8 @@
 class Mordavokne < Formula
   desc "Intrusive C++ cross-platform OpenGL based GUI library."
   homepage "https://github.com/cppfw/mordavokne"
-  url "https://github.com/cppfw/mordavokne/archive/0.2.69.tar.gz"
-  sha256 "a586b0d3fd8506fb297ec242d14a0adb8cbae7000e4f13ffd091aafa733977fc"
+  url "https://github.com/cppfw/mordavokne/archive/0.2.70.tar.gz"
+  sha256 "26064858ce91334336c02218ce5516647d26b89787ab9216025c589e0faf9c7a"
 
   depends_on "prorab" => :build
   depends_on "prorab-extra" => :build
@@ -13,11 +13,11 @@ class Mordavokne < Formula
   depends_on "glew"
   depends_on "libr4"
   depends_on "libmorda"
-  depends_on "libmorda-opengl2-ren"
+  depends_on "libmorda-render-opengl"
 
   def install
     ENV['PATH'] += ':/usr/local/bin'
-    system "make", "-f", "src/makefile", "install", "PREFIX=#{prefix}"
+    system "make", "install", "PREFIX=#{prefix}"
   end
 
   #test do
