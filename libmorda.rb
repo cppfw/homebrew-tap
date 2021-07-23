@@ -1,8 +1,8 @@
 class Libmorda < Formula
   desc "C++ cross-platform OpenGL based GUI library."
   homepage "https://github.com/cppfw/morda"
-  url "https://github.com/cppfw/morda/archive/0.5.170.tar.gz"
-  sha256 "c75f775be955d526e0dcdee925b99a564cd76707c1cb929b542dc81f3562fbbf"
+  url "https://github.com/cppfw/morda/archive/0.5.171.tar.gz"
+  sha256 "83104d6966184599607edbf9b22d2eb8e864004d6798b0bdf585b3f17320e9f8"
 
   depends_on "prorab" => :build
   depends_on "prorab-extra" => :build
@@ -22,11 +22,10 @@ class Libmorda < Formula
   
   def install
     ENV['PATH'] += ':/usr/local/bin'
-    system "make", "-f", "src/morda/makefile", "install", "PREFIX=#{prefix}"
-    system "make", "-f", "res/makefile", "install", "PREFIX=#{prefix}"
+    system "make", "install", "PREFIX=#{prefix}"
   end
 
-  #test do
-  #  system "make", "test"
-  #end
+  test do
+    system "make", "test"
+  end
 end
