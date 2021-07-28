@@ -1,12 +1,12 @@
 class Myci < Formula
   desc "Helper CI scripts."
   homepage "https://github.com/cppfw/myci"
-  url "https://github.com/cppfw/myci/archive/0.1.131.tar.gz"
-  sha256 "6bfca1b5f9ae287f41f2aadb378c8a9d4a576a1ff4188cd7b1f17524f1ff7af0"
+  url "https://github.com/cppfw/myci/archive/0.1.132.tar.gz"
+  sha256 "4de39e8bfd341b2a59873e6fe0390e381f08cc4725e7f4e0eae9af309e73a2bb"
 
+  depends_on "dos2unix"
   depends_on "md5sha1sum"
   depends_on "curl"
-  depends_on "jq"
 
   def install
     ENV['PATH'] += ':/usr/local/bin'
