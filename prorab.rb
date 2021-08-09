@@ -1,17 +1,19 @@
 class Prorab < Formula
   desc "GNU make based build system."
   homepage "https://github.com/cppfw/prorab"
-  url "https://github.com/cppfw/prorab/archive/2.0.2.tar.gz"
-  sha256 "cbd6dcb027b4a6ed603eb63953d786a87f9f96c13c90bb5758a3d50e09c48b03"
+  url "https://github.com/cppfw/prorab/archive/2.0.3.tar.gz"
+  sha256 "7654fceb5f904ee31ac43548edf1474730c2006832bedc92a25193ab1851faab"
 
   depends_on "dos2unix" => :build
+  depends_on "make"
 
+  # use gmake here because otherwise homebrew uses default Mac's make which is of old version 3.81 which has bugs
   def install
     ENV['PATH'] += ':/usr/local/bin'
-    system "make", "install", "PREFIX=#{prefix}"
+    system "gmake", "install", "PREFIX=#{prefix}"
   end
   
   test do
-    system "make", "test"
+    system "gmake", "test"
   end
 end
