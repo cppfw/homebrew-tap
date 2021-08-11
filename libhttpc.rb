@@ -1,8 +1,8 @@
 class Libhttpc < Formula
   desc "C++ cross-platform HTTP client library."
   homepage "https://github.com/cppfw/httpc"
-  url "https://github.com/cppfw/httpc/archive/0.1.9.tar.gz"
-  sha256 "773f682a18e86399a15cdd1ea9ccb4f32973314c2deef9c7a6549cc29b5c6f82"
+  url "https://github.com/cppfw/httpc/archive/0.1.10.tar.gz"
+  sha256 "e680503960776e09f48126d6d91d2b3e247eb7925088dcb67acbe83c43523490"
 
   depends_on "prorab" => :build
   depends_on "prorab-extra" => :build
@@ -13,12 +13,13 @@ class Libhttpc < Formula
   depends_on "libnitki"
   depends_on "curl"
 
+  # use gmake here because otherwise homebrew uses default Mac's make which is of too old version 3.81
   def install
     ENV['PATH'] += ':/usr/local/bin'
-    system "make", "install", "PREFIX=#{prefix}"
+    system "/usr/local/opt/make/libexec/gnubin/make", "install", "PREFIX=#{prefix}"
   end
 
   test do
-    system "make", "test"
+    system "/usr/local/opt/make/libexec/gnubin/make", "test"
   end
 end
