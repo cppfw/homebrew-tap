@@ -1,8 +1,8 @@
 class Mordavokne < Formula
   desc "Intrusive C++ cross-platform OpenGL based GUI library."
   homepage "https://github.com/cppfw/mordavokne"
-  url "https://github.com/cppfw/mordavokne/archive/0.2.71.tar.gz"
-  sha256 "763c1644e59a4dfba97136938024d02ccaa9e18b255e4410277e9fbdd4882e53"
+  url "https://github.com/cppfw/mordavokne/archive/0.2.72.tar.gz"
+  sha256 "912932749460cdd82c4591b9fb97b250b04796be6a1a2dd63fbdadc2dd8cdc29"
 
   depends_on "prorab" => :build
   depends_on "prorab-extra" => :build
@@ -15,12 +15,13 @@ class Mordavokne < Formula
   depends_on "libmorda"
   depends_on "libmorda-render-opengl"
 
+  # use gmake here because otherwise homebrew uses default Mac's make which is of too old version 3.81
   def install
     ENV['PATH'] += ':/usr/local/bin'
-    system "make", "install", "PREFIX=#{prefix}"
+    system "/usr/local/opt/make/libexec/gnubin/make", "install", "PREFIX=#{prefix}"
   end
 
-  #test do
-  #  system "make", "test"
-  #end
+  test do
+    system "/usr/local/opt/make/libexec/gnubin/make", "test"
+  end
 end
