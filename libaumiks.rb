@@ -1,8 +1,8 @@
 class Libaumiks < Formula
   desc "C++ cross-platform audio mixer library."
   homepage "https://github.com/cppfw/aumiks"
-  url "https://github.com/cppfw/aumiks/archive/0.3.30.tar.gz"
-  sha256 "e6a3ff5ff0a6922b609bc7e235708d34229d9805dd7c1b03a2be33049c6f5283"
+  url "https://github.com/cppfw/aumiks/archive/0.3.31.tar.gz"
+  sha256 "084bbb932ca4255f32f4845d6bf52d4870d33ac5cb4ccaba92c743643944090c"
 
   depends_on "prorab" => :build
   depends_on "prorab-extra" => :build
@@ -10,12 +10,13 @@ class Libaumiks < Formula
   depends_on "libaudout"
   depends_on "libpapki"
 
+  # use gmake here because otherwise homebrew uses default Mac's make which is of too old version 3.81
   def install
     ENV['PATH'] += ':/usr/local/bin'
-    system "make", "-f", "src/makefile", "install", "PREFIX=#{prefix}"
+    system "/usr/local/opt/make/libexec/gnubin/make", "install", "PREFIX=#{prefix}"
   end
 
   #test do
-  #  system "make", "test"
+  #  system "/usr/local/opt/make/libexec/gnubin/make", "test"
   #end
 end
