@@ -1,8 +1,8 @@
 class Libmorda < Formula
   desc "C++ cross-platform OpenGL based GUI library."
   homepage "https://github.com/cppfw/morda"
-  url "https://github.com/cppfw/morda/archive/0.5.173.tar.gz"
-  sha256 "fc3cbf914245f8406fcead006b18986efba2afbd93b43cf7a2ec67135f454467"
+  url "https://github.com/cppfw/morda/archive/0.5.174.tar.gz"
+  sha256 "f392261e9da51e47a4d8d9a7add178faa1d15cee371e2d3244e38ff1baecf01c"
 
   depends_on "prorab" => :build
   depends_on "prorab-extra" => :build
@@ -20,12 +20,13 @@ class Libmorda < Formula
   depends_on "libsvgdom"
   depends_on "libsvgren"
   
+  # use gmake here because otherwise homebrew uses default Mac's make which is of too old version 3.81
   def install
     ENV['PATH'] += ':/usr/local/bin'
-    system "make", "install", "PREFIX=#{prefix}"
+    system "/usr/local/opt/make/libexec/gnubin/make", "install", "PREFIX=#{prefix}"
   end
 
   test do
-    system "make", "test"
+    system "/usr/local/opt/make/libexec/gnubin/make", "test"
   end
 end
