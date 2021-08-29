@@ -1,8 +1,8 @@
 class LibmordaRenderOpengl < Formula
   desc "OpenGl renderer for morda GUI library."
   homepage "https://github.com/cppfw/morda-render-opengl"
-  url "https://github.com/cppfw/morda-render-opengl/archive/0.1.53.tar.gz"
-  sha256 "d68889397fecefd391ee91e1a7935a360c3e66dafe7ee64f742d5f3e0e5287f6"
+  url "https://github.com/cppfw/morda-render-opengl/archive/0.1.54.tar.gz"
+  sha256 "a432b01be31e6f4117b0b0d01ef031b45666118da94677d29fd6109c3ed521ec"
 
   depends_on "prorab" => :build
   depends_on "prorab-extra" => :build
