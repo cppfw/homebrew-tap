@@ -1,10 +1,11 @@
 class ProrabExtra < Formula
   desc "GNU make based build system."
   homepage "https://github.com/cppfw/prorab-extra"
-  url "https://github.com/cppfw/prorab-extra/archive/0.2.31.tar.gz"
-  sha256 "d5508df08d018237fbdb9020e71f4c3ff680b101a404e473be2138e378d3a6f1"
+  url "https://github.com/cppfw/prorab-extra/archive/0.2.32.tar.gz"
+  sha256 "53ddc9ff7784a97292d2f60403633ef6e38a1ca4ff7441aec03030a177dbf426"
 
   depends_on "make"
+  depends_on "myci"
   depends_on "prorab"
 
   # use gmake here because otherwise homebrew uses default Mac's make which is of too old version 3.81
