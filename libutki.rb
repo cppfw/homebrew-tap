@@ -1,8 +1,8 @@
 class Libutki < Formula
   desc "C++ utility functions library. Stuff missing from std:: namespace."
   homepage "https://github.com/cppfw/utki"
-  url "https://github.com/cppfw/utki/archive/1.1.161.tar.gz"
-  sha256 "d510b5a795a1a924ffc70863175a5ecc27b386276a1b5274d29b3e7851c8299c"
+  url "https://github.com/cppfw/utki/archive/1.1.162.tar.gz"
+  sha256 "286c447b4d1f37c7a6f253044cdd8a71e3a611ad0b18ea04d4833dc4c7a374e8"
 
   depends_on "prorab" => :build
   depends_on "prorab-extra" => :build
