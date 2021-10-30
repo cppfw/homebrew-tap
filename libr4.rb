@@ -1,11 +1,12 @@
 class Libr4 < Formula
   desc "C++ 3d math library."
   homepage "https://github.com/cppfw/r4"
-  url "https://github.com/cppfw/r4/archive/1.0.60.tar.gz"
-  sha256 "052ef31fd715a4d38dedbd66802dd41d61e9aea40d12e516048191ac0e863ad2"
+  url "https://github.com/cppfw/r4/archive/1.0.61.tar.gz"
+  sha256 "904d5b1a4323d9310e6b34af8adcb7e9094a6a60079462ff8cc42492fd9cbe2a"
 
   depends_on "prorab" => :build
   depends_on "prorab-extra" => :build
+  depends_on "libtst" => :build
   depends_on "libutki"
 
   # use gmake here because otherwise homebrew uses default Mac's make which is of too old version 3.81
