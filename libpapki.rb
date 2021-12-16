@@ -1,8 +1,8 @@
 class Libpapki < Formula
   desc "C++ cross-platform file system library."
   homepage "https://github.com/cppfw/papki"
-  url "https://github.com/cppfw/papki/archive/1.0.114.tar.gz"
-  sha256 "e9e524d257619016344388405c3bf96d77da6f8867d5da6b3a59a65163f7f5d5"
+  url "https://github.com/cppfw/papki/archive/1.0.115.tar.gz"
+  sha256 "f21b62f9ad443f1996035a5e895926b7487fee4e4e95a5899c77387d7ac39d80"
 
   depends_on "prorab" => :build
   depends_on "libutki"
