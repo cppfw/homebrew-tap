@@ -1,8 +1,8 @@
 class Libsetka < Formula
   desc "C++ cross-platform network library."
   homepage "https://github.com/cppfw/setka"
-  url "https://github.com/cppfw/setka/archive/1.0.26.tar.gz"
-  sha256 "dda66c4e11b890be24b22af5521a2779f1767f3a9ff238ddaa52c3149a88e200"
+  url "https://github.com/cppfw/setka/archive/1.0.27.tar.gz"
+  sha256 "121e099df73b0aa80267c12f0f1b080e22ed792bf229c08df0c68db88b6dc3d3"
 
   depends_on "prorab" => :build
   depends_on "prorab-extra" => :build
