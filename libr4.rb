@@ -1,8 +1,8 @@
 class Libr4 < Formula
   desc "C++ 3d math library."
   homepage "https://github.com/cppfw/r4"
-  url "https://github.com/cppfw/r4/archive/1.0.70.tar.gz"
-  sha256 "28d7aba597714bf2b9163de1afebd61f4d0ec4ca9eaa22302536040ecc768ed1"
+  url "https://github.com/cppfw/r4/archive/1.0.71.tar.gz"
+  sha256 "147b3503722c3ae49b059264c921deeedf54e16c1f304e18eb8599f59790af7b"
 
   depends_on "prorab" => :build
   depends_on "prorab-extra" => :build
@@ -12,7 +12,7 @@ class Libr4 < Formula
   # use gmake here because otherwise homebrew uses default Mac's make which is of too old version 3.81
   def install
     ENV['PATH'] += ':/usr/local/bin'
-    system "/usr/local/opt/make/libexec/gnubin/make", "install", "PREFIX=#{prefix}"
+    system "/usr/local/opt/make/libexec/gnubin/make", "install", "PREFIX=#{prefix}", "lint=off"
   end
 
   test do
