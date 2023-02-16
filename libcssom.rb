@@ -1,8 +1,8 @@
 class Libcssom < Formula
   desc "C++ cross-platform CSS DOM library."
   homepage "https://github.com/cppfw/cssom"
-  url "https://github.com/cppfw/cssom/archive/0.2.1.tar.gz"
-  sha256 "ad51e20002f50b509c89d17d5e8f3090658ec2f1ff4330df56089aab943c33e0"
+  url "https://github.com/cppfw/cssom/archive/0.2.2.tar.gz"
+  sha256 "9284d2f4dcb52adbc9805cd685d35ed915e0905b9bf5e2a09855d1e711e0c16d"
 
   depends_on "prorab" => :build
   depends_on "prorab-extra" => :build
@@ -16,7 +16,7 @@ class Libcssom < Formula
   # use gmake here because otherwise homebrew uses default Mac's make which is of too old version 3.81
   def install
     ENV['PATH'] += ':/usr/local/bin'
-    system "/usr/local/opt/make/libexec/gnubin/make", "install", "PREFIX=#{prefix}"
+    system "/usr/local/opt/make/libexec/gnubin/make", "install", "PREFIX=#{prefix}", "lint=off"
   end
 
   test do
