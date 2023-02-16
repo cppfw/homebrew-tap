@@ -1,8 +1,8 @@
 class Libtst < Formula
   desc "C++ testing framework."
   homepage "https://github.com/cppfw/tst"
-  url "https://github.com/cppfw/tst/archive/0.3.23.tar.gz"
-  sha256 "c5519b4a4fad246dd0d89b75c0610c701c611cca40fd8aaed6bfa63f420ad2a5"
+  url "https://github.com/cppfw/tst/archive/0.3.24.tar.gz"
+  sha256 "be7c2211c5720f6ef1bdb4867a634b6bd359692b852819d9d69a7454fae3c817"
 
   depends_on "prorab" => :build
   depends_on "prorab-extra" => :build
@@ -15,7 +15,7 @@ class Libtst < Formula
   # use gmake here because otherwise homebrew uses default Mac's make which is of too old version 3.81
   def install
     ENV['PATH'] += ':/usr/local/bin'
-    system "/usr/local/opt/make/libexec/gnubin/make", "install", "PREFIX=#{prefix}"
+    system "/usr/local/opt/make/libexec/gnubin/make", "install", "PREFIX=#{prefix}", "lint=off"
   end
 
   test do
