@@ -1,8 +1,8 @@
 class Libantigrain < Formula
   desc "Anti-grain geometry C++ library."
   homepage "https://github.com/cppfw/agg"
-  url "https://github.com/cppfw/agg/archive/2.8.18.tar.gz"
-  sha256 "f03aee8f5aaa6fdd1b94151cf1a6a327406a0ab1c0ad4fb0cdc0abf4970029e5"
+  url "https://github.com/cppfw/agg/archive/2.8.19.tar.gz"
+  sha256 "c6607118966fd107069bdc14fefd6d1e935532ed877c678412830fc664c32452"
 
   depends_on "prorab" => :build
   depends_on "prorab-extra" => :build
