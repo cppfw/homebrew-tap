@@ -1,8 +1,8 @@
 class Libsvgdom < Formula
   desc "C++ cross-platform SVG DOM library."
   homepage "https://github.com/cppfw/svgdom"
-  url "https://github.com/cppfw/svgdom/archive/0.4.5.tar.gz"
-  sha256 "de3f1e33b58431657e72f0b0ef6e01c5d94ddbf12192687eca4caa33522998b9"
+  url "https://github.com/cppfw/svgdom/archive/0.4.6.tar.gz"
+  sha256 "4fae3f778132edaec426edd6ff2808792aa630e66756e95ab032a7fe81281794"
 
   depends_on "prorab" => :build
   depends_on "prorab-extra" => :build
@@ -18,7 +18,7 @@ class Libsvgdom < Formula
   # use gmake here because otherwise homebrew uses default Mac's make which is of too old version 3.81
   def install
     ENV['PATH'] += ':/usr/local/bin'
-    system "/usr/local/opt/make/libexec/gnubin/make", "install", "PREFIX=#{prefix}"
+    system "/usr/local/opt/make/libexec/gnubin/make", "install", "PREFIX=#{prefix}", "lint=off"
   end
 
   test do
