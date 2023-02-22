@@ -1,8 +1,8 @@
 class Libaudout < Formula
   desc "C++ cross-platform audio output library."
   homepage "https://github.com/cppfw/audout"
-  url "https://github.com/cppfw/audout/archive/0.3.38.tar.gz"
-  sha256 "6d5c2d234029335454410777a8f3c06d70270879407560527b1426d9434f8a02"
+  url "https://github.com/cppfw/audout/archive/0.3.39.tar.gz"
+  sha256 "6caf85cbb4cb8450b72282c64908d0f9472e17039eee0461fe37083fd642d264"
 
   depends_on "prorab" => :build
   depends_on "libnitki" => :build
