@@ -1,8 +1,8 @@
 class Libtreeml < Formula
   desc "C++ cross-platform treeml parser library."
   homepage "https://github.com/cppfw/treeml"
-  url "https://github.com/cppfw/treeml/archive/0.2.8.tar.gz"
-  sha256 "27b2b5d81348704018d156e066e43a23023cf688f6f98ff88dfe275724f9bbc1"
+  url "https://github.com/cppfw/treeml/archive/0.2.9.tar.gz"
+  sha256 "bfc912f3067f2b48cdd074e627123beed4c85d8d561740d5eeef5f1a3090e721"
 
   depends_on "prorab" => :build
   depends_on "libclargs" => :build
