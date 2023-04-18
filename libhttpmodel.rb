@@ -1,8 +1,8 @@
 class Libhttpmodel < Formula
   desc "HTTP model C++ library."
   homepage "https://github.com/cppfw/httpmodel"
-  url "https://github.com/cppfw/httpmodel/archive/0.1.1.tar.gz"
-  sha256 "58d320872d236c4e3930b2209cc20c777a6c7899e78bfe06892c96945fffa237"
+  url "https://github.com/cppfw/httpmodel/archive/0.1.2.tar.gz"
+  sha256 "5769e14d9f886e2216b61468d96912feac1c2a94188d460fdab6058d1cbcf11d"
 
   depends_on "prorab" => :build
   depends_on "prorab-extra" => :build
