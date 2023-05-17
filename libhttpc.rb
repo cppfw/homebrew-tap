@@ -1,8 +1,8 @@
 class Libhttpc < Formula
   desc "C++ cross-platform HTTP client library."
   homepage "https://github.com/cppfw/httpc"
-  url "https://github.com/cppfw/httpc/archive/0.1.14.tar.gz"
-  sha256 "ead364b86d1a521d577cc2e4ef75b86d3f12925a619f632e3256c44b840e350b"
+  url "https://github.com/cppfw/httpc/archive/0.1.15.tar.gz"
+  sha256 "89698101802f45dc8678e0ca3ef30f39748856ca61c7ab396ca6c2b732421a5c"
 
   depends_on "prorab" => :build
   depends_on "prorab-extra" => :build
