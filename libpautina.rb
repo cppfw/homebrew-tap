@@ -1,8 +1,8 @@
 class Libpautina < Formula
   desc "HTTP service C++ library."
   homepage "https://github.com/cppfw/pautina"
-  url "https://github.com/cppfw/pautina/archive/0.1.4.tar.gz"
-  sha256 "2b015abadc9ba9890d008dfc7c7be95a25c64ef5f7a2fcb51457fe5af6842de1"
+  url "https://github.com/cppfw/pautina/archive/0.1.5.tar.gz"
+  sha256 "9eec36828ab76852a48d5e55b3108ff462f5d60d62577afc16242d46b385f3ef"
 
   depends_on "prorab" => :build
   depends_on "prorab-extra" => :build
