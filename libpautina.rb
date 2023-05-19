@@ -1,15 +1,14 @@
 class Libpautina < Formula
   desc "HTTP service C++ library."
   homepage "https://github.com/cppfw/pautina"
-  url "https://github.com/cppfw/pautina/archive/0.1.5.tar.gz"
-  sha256 "9eec36828ab76852a48d5e55b3108ff462f5d60d62577afc16242d46b385f3ef"
+  url "https://github.com/cppfw/pautina/archive/0.1.6.tar.gz"
+  sha256 "127119bff8d9a0202563732bffef38b834b5885c56e907e227e6d02841c1305f"
 
   depends_on "prorab" => :build
   depends_on "prorab-extra" => :build
   depends_on "libtst" => :build
-  depends_on "libutki"
+  depends_on "libtcpserver"
   depends_on "libhttpmodel"
-  depends_on "libsetka"
 
   # use gmake here because otherwise homebrew uses default Mac's make which is of too old version 3.81
   def install
