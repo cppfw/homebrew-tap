@@ -1,8 +1,8 @@
 class Libsvgren < Formula
   desc "C++ cross-platform SVG rendering library."
   homepage "https://github.com/igagis/svgren"
-  url "https://github.com/igagis/svgren/archive/0.6.9.tar.gz"
-  sha256 "5cf33d42b2ece20fd9503ee86f3e47b5e4853f3cb66f3ad5bf103cf637c81f19"
+  url "https://github.com/igagis/svgren/archive/0.6.10.tar.gz"
+  sha256 "f95c2e894c8137798d10368ed791c78e6eee03af4eb07aabb38362b2eb7539f1"
 
   depends_on "prorab" => :build
   depends_on "prorab-extra" => :build
