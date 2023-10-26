@@ -1,8 +1,8 @@
 class Librasterimage < Formula
   desc "C++ cross-platform SVG rendering library."
   homepage "https://github.com/igagis/rasterimage"
-  url "https://github.com/igagis/rasterimage/archive/0.1.8.tar.gz"
-  sha256 "7a3e06498ccd68d555735d45cdf4c8f3cd88074341085b3a11f85d4acfc5827d"
+  url "https://github.com/igagis/rasterimage/archive/0.1.9.tar.gz"
+  sha256 "8885e0a3bf9dfbb392f154aad2b336368d7c665e1fb6b7e5c0cd5638e03ba5c8"
 
   depends_on "prorab" => :build
   depends_on "prorab-extra" => :build
