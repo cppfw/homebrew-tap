@@ -1,8 +1,8 @@
 class Libaumiks < Formula
   desc "C++ cross-platform audio mixer library."
   homepage "https://github.com/cppfw/aumiks"
-  url "https://github.com/cppfw/aumiks/archive/0.3.36.tar.gz"
-  sha256 "8afb958b3a3978558202db1ce38a582c605f4701d7489c82e526a07c37813f56"
+  url "https://github.com/cppfw/aumiks/archive/0.3.38.tar.gz"
+  sha256 "d0e61d7e63fb92cff182fe6944bf4ace9653bf5e2ee06a5be84ab31dc838c744"
 
   depends_on "prorab" => :build
   depends_on "prorab-extra" => :build
