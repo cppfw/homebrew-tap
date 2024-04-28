@@ -1,8 +1,8 @@
 class Libopros < Formula
   desc "C++ cross-platform event waiting library."
   homepage "https://github.com/cppfw/opros"
-  url "https://github.com/cppfw/opros/archive/1.0.93.tar.gz"
-  sha256 "6b033ad5a68a56ff3d1e474c6707775d7f08c1f7723aa2568f2c7ed8622e3569"
+  url "https://github.com/cppfw/opros/archive/1.0.94.tar.gz"
+  sha256 "fba08873064d4472f9744ab7fa8f69c38322a4a98eb02c478ed6db194dca18e0"
 
   depends_on "prorab" => :build
   depends_on "libutki"
@@ -10,10 +10,10 @@ class Libopros < Formula
   # use gmake here because otherwise homebrew uses default Mac's make which is of too old version 3.81
   def install
     ENV['PATH'] += ':/usr/local/bin'
-    system "/usr/local/opt/make/libexec/gnubin/make", "install", "PREFIX=#{prefix}", "lint=off"
+    system "#{ENV['HOMEBREW_PREFIX']}/opt/make/libexec/gnubin/make", "--include-dir=#{ENV['HOMEBREW_PREFIX']}/include", "install", "PREFIX=#{prefix}", "lint=off"
   end
 
   test do
-    system "/usr/local/opt/make/libexec/gnubin/make", "test"
+    system "#{ENV['HOMEBREW_PREFIX']}/opt/make/libexec/gnubin/make", "--include-dir=#{ENV['HOMEBREW_PREFIX']}/include", "test"
   end
 end
