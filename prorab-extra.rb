@@ -1,8 +1,8 @@
 class ProrabExtra < Formula
   desc "GNU make based build system."
   homepage "https://github.com/cppfw/prorab-extra"
-  url "https://github.com/cppfw/prorab-extra/archive/0.2.49.tar.gz"
-  sha256 "17730be850ecfa77c6315ea227c2d2eb7dffa74934d03fb09ea058d06e8e3590"
+  url "https://github.com/cppfw/prorab-extra/archive/0.2.50.tar.gz"
+  sha256 "beb7efef644051fbb8a739e1126d2e5e4d5c7058f0e646218d3c9c11bf8ce93f"
 
   depends_on "make"
   depends_on "myci"
@@ -11,10 +11,10 @@ class ProrabExtra < Formula
   # use gmake here because otherwise homebrew uses default Mac's make which is of too old version 3.81
   def install
     ENV['PATH'] += ':/usr/local/bin'
-    system "/usr/local/opt/make/libexec/gnubin/make", "install", "PREFIX=#{prefix}"
+    system "gmake", "--include-dir=$(brew --prefix)/include", "install", "PREFIX=#{prefix}"
   end
   
   test do
-    system "/usr/local/opt/make/libexec/gnubin/make", "test"
+    system "gmake", "--include-dir=$(brew --prefix)/include", "test"
   end
 end
