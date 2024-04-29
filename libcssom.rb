@@ -1,8 +1,8 @@
 class Libcssom < Formula
   desc "C++ cross-platform CSS DOM library."
   homepage "https://github.com/cppfw/cssom"
-  url "https://github.com/cppfw/cssom/archive/0.2.10.tar.gz"
-  sha256 "ed70ae395957c8b56d6eca86f56881a9da2af6b1024a02c45f0734df088dddbc"
+  url "https://github.com/cppfw/cssom/archive/0.2.11.tar.gz"
+  sha256 "905c8b12930bf6d26a02e0debf64ee457c16796b0843e3f85d21698439d41b5a"
 
   depends_on "prorab" => :build
   depends_on "prorab-extra" => :build
@@ -15,11 +15,11 @@ class Libcssom < Formula
 
   # use gmake here because otherwise homebrew uses default Mac's make which is of too old version 3.81
   def install
-    ENV['PATH'] += ':/usr/local/bin'
-    system "/usr/local/opt/make/libexec/gnubin/make", "install", "PREFIX=#{prefix}", "lint=off"
+    ENV['PATH'] += ":#{ENV['HOMEBREW_PREFIX']}/bin"
+    system "#{ENV['HOMEBREW_PREFIX']}/opt/make/libexec/gnubin/make", "--include-dir=#{ENV['HOMEBREW_PREFIX']}/include", "install", "PREFIX=#{prefix}", "lint=off"
   end
 
   test do
-    system "/usr/local/opt/make/libexec/gnubin/make", "test"
+    system "#{ENV['HOMEBREW_PREFIX']}/opt/make/libexec/gnubin/make", "--include-dir=#{ENV['HOMEBREW_PREFIX']}/include", "test"
   end
 end
