@@ -1,8 +1,8 @@
 class Libnitki < Formula
   desc "C++ cross-platform threading library."
   homepage "https://github.com/cppfw/nitki"
-  url "https://github.com/cppfw/nitki/archive/1.0.84.tar.gz"
-  sha256 "96ec7a148b4d1c64f1197434cf66cc45671325d6c4b14b9e7535b48d585012b6"
+  url "https://github.com/cppfw/nitki/archive/1.0.85.tar.gz"
+  sha256 "dad4cf7e73c67a3ac14c8a7ba7fb02b0088f795f7670874924ed988b7003a89c"
 
   depends_on "prorab" => :build
   depends_on "libopros"
@@ -10,7 +10,7 @@ class Libnitki < Formula
 
   # use gmake here because otherwise homebrew uses default Mac's make which is of too old version 3.81
   def install
-    ENV['PATH'] += ':/usr/local/bin'
+    ENV['PATH'] += ':#{ENV['HOMEBREW_PREFIX']}/bin'
     system "#{ENV['HOMEBREW_PREFIX']}/opt/make/libexec/gnubin/make", "--include-dir=#{ENV['HOMEBREW_PREFIX']}/include", "install", "PREFIX=#{prefix}", "lint=off"
   end
 
