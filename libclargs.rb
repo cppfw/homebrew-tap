@@ -1,8 +1,8 @@
 class Libclargs < Formula
   desc "C++ cross-platform library for parsing command line arguments."
   homepage "https://github.com/cppfw/clargs"
-  url "https://github.com/cppfw/clargs/archive/0.2.61.tar.gz"
-  sha256 "9be03eda3c7be7c761bcc8f17604712bf15f89ef73864b5146b6e0ebb84a1753"
+  url "https://github.com/cppfw/clargs/archive/0.2.62.tar.gz"
+  sha256 "5c9808418e446607004f2c1194d298c6c089c021d4226ff976e9894d14586b98"
 
   depends_on "prorab" => :build
   depends_on "prorab-extra" => :build
@@ -11,7 +11,7 @@ class Libclargs < Formula
 
   # use gmake here because otherwise homebrew uses default Mac's make which is of too old version 3.81
   def install
-    ENV['PATH'] += ':/usr/local/bin'
+    ENV['PATH'] += ':#{ENV['HOMEBREW_PREFIX']}/bin'
     system "#{ENV['HOMEBREW_PREFIX']}/opt/make/libexec/gnubin/make", "--include-dir=#{ENV['HOMEBREW_PREFIX']}/include", "--directory=src", "install", "PREFIX=#{prefix}", "lint=off"
   end
 
