@@ -1,8 +1,8 @@
 class Libsvgdom < Formula
   desc "C++ cross-platform SVG DOM library."
   homepage "https://github.com/cppfw/svgdom"
-  url "https://github.com/cppfw/svgdom/archive/0.4.13.tar.gz"
-  sha256 "f9a0d5eb8085ccba3bb93afab27935dbad845c0a98d617fc07d8014f30f99ff8"
+  url "https://github.com/cppfw/svgdom/archive/0.4.14.tar.gz"
+  sha256 "e9d18bab5c08c92a2bb2d40c03de0450c84ec14e4e1c9bf72c507532596da2f9"
 
   depends_on "prorab" => :build
   depends_on "prorab-extra" => :build
@@ -17,11 +17,11 @@ class Libsvgdom < Formula
 
   # use gmake here because otherwise homebrew uses default Mac's make which is of too old version 3.81
   def install
-    ENV['PATH'] += ':/usr/local/bin'
-    system "/usr/local/opt/make/libexec/gnubin/make", "install", "PREFIX=#{prefix}", "lint=off"
+    ENV['PATH'] += ":#{ENV['HOMEBREW_PREFIX']}/bin"
+    system "#{ENV['HOMEBREW_PREFIX']}/opt/make/libexec/gnubin/make", "--include-dir=#{ENV['HOMEBREW_PREFIX']}/include", "install", "PREFIX=#{prefix}", "lint=off"
   end
 
   test do
-    system "/usr/local/opt/make/libexec/gnubin/make", "test"
+    system "#{ENV['HOMEBREW_PREFIX']}/opt/make/libexec/gnubin/make", "--include-dir=#{ENV['HOMEBREW_PREFIX']}/include", "test"
   end
 end
