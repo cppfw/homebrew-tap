@@ -1,8 +1,8 @@
 class Libhttpmodel < Formula
   desc "HTTP model C++ library."
   homepage "https://github.com/cppfw/httpmodel"
-  url "https://github.com/cppfw/httpmodel/archive/0.1.8.tar.gz"
-  sha256 "931b590e48d79d4ed23addcef471850dd6d04541d5f0e4ccc63287172e01ca39"
+  url "https://github.com/cppfw/httpmodel/archive/0.1.9.tar.gz"
+  sha256 "327f29c1419a8ff2703b36f9017c14dae69093c33574e775652c3d9e3b81c042"
 
   depends_on "prorab" => :build
   depends_on "prorab-extra" => :build
@@ -12,12 +12,11 @@ class Libhttpmodel < Formula
 
   # use gmake here because otherwise homebrew uses default Mac's make which is of too old version 3.81
   def install
-    ENV['PATH'] += ':/usr/local/bin'
-    # install from src directory because tests require submodules
-    system "/usr/local/opt/make/libexec/gnubin/make", "--directory", "src", "install", "PREFIX=#{prefix}", "lint=off"
+    ENV['PATH'] += ":#{ENV['HOMEBREW_PREFIX']}/bin"
+    system "#{ENV['HOMEBREW_PREFIX']}/opt/make/libexec/gnubin/make", "--include-dir=#{ENV['HOMEBREW_PREFIX']}/include", "install", "PREFIX=#{prefix}", "lint=off"
   end
 
   test do
-    system "/usr/local/opt/make/libexec/gnubin/make", "test"
+    system "#{ENV['HOMEBREW_PREFIX']}/opt/make/libexec/gnubin/make", "--include-dir=#{ENV['HOMEBREW_PREFIX']}/include", "test"
   end
 end
