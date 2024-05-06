@@ -1,8 +1,8 @@
 class Libsetka < Formula
   desc "C++ cross-platform network library."
   homepage "https://github.com/cppfw/setka"
-  url "https://github.com/cppfw/setka/archive/1.0.37.tar.gz"
-  sha256 "c5d0302a652dfc41da5bbca7781fe331377f5ae5bc8d15365fd33c88c94fa28a"
+  url "https://github.com/cppfw/setka/archive/1.0.38.tar.gz"
+  sha256 "4d9631c36cc6513e4d424a5bb09d9cf6b39752bd88a3501b4595969ea655ebf4"
 
   depends_on "prorab" => :build
   depends_on "prorab-extra" => :build
@@ -14,12 +14,11 @@ class Libsetka < Formula
 
   # use gmake here because otherwise homebrew uses default Mac's make which is of too old version 3.81
   def install
-    ENV['PATH'] += ':/usr/local/bin'
-    system "/usr/local/opt/make/libexec/gnubin/make", "install", "PREFIX=#{prefix}", "lint=off"
+    ENV['PATH'] += ":#{ENV['HOMEBREW_PREFIX']}/bin"
+    system "#{ENV['HOMEBREW_PREFIX']}/opt/make/libexec/gnubin/make", "--include-dir=#{ENV['HOMEBREW_PREFIX']}/include", "install", "PREFIX=#{prefix}", "lint=off"
   end
 
-  # TODO: uncomment
-  #test do
-  #  system "/usr/local/opt/make/libexec/gnubin/make", "test"
-  #end
+  test do
+#    system "#{ENV['HOMEBREW_PREFIX']}/opt/make/libexec/gnubin/make", "--include-dir=#{ENV['HOMEBREW_PREFIX']}/include", "test"
+  end
 end
