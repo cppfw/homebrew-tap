@@ -1,8 +1,8 @@
 class Libhttpc < Formula
   desc "C++ cross-platform HTTP client library."
   homepage "https://github.com/cppfw/httpc"
-  url "https://github.com/cppfw/httpc/archive/0.1.17.tar.gz"
-  sha256 "9a745398e9e868a98178e68178fa13ef83c499d966e4faa1378d35dee7098f49"
+  url "https://github.com/cppfw/httpc/archive/0.1.18.tar.gz"
+  sha256 "f46109c2dc386f08ee8009eefd8ed2f92f41d530c36e4db685d29da4388ef76c"
 
   depends_on "prorab" => :build
   depends_on "prorab-extra" => :build
@@ -16,11 +16,11 @@ class Libhttpc < Formula
 
   # use gmake here because otherwise homebrew uses default Mac's make which is of too old version 3.81
   def install
-    ENV['PATH'] += ':/usr/local/bin'
-    system "/usr/local/opt/make/libexec/gnubin/make", "install", "PREFIX=#{prefix}"
+    ENV['PATH'] += ":#{ENV['HOMEBREW_PREFIX']}/bin"
+    system "#{ENV['HOMEBREW_PREFIX']}/opt/make/libexec/gnubin/make", "--include-dir=#{ENV['HOMEBREW_PREFIX']}/include", "install", "PREFIX=#{prefix}", "lint=off"
   end
 
   test do
-    system "/usr/local/opt/make/libexec/gnubin/make", "test"
+    system "#{ENV['HOMEBREW_PREFIX']}/opt/make/libexec/gnubin/make", "--include-dir=#{ENV['HOMEBREW_PREFIX']}/include", "test"
   end
 end
