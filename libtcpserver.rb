@@ -1,8 +1,8 @@
 class Libtcpserver < Formula
   desc "HTTP service C++ library."
   homepage "https://github.com/cppfw/tcpserver"
-  url "https://github.com/cppfw/tcpserver/archive/0.1.3.tar.gz"
-  sha256 "0991606da34ddb8e07fff010b0bf437b62bd717c31cfaf7889340595e0eb54f6"
+  url "https://github.com/cppfw/tcpserver/archive/0.1.4.tar.gz"
+  sha256 "9e8699e70036913de2781f65492f37cc5976f919d947c1e0aba6ee68c3f41c2e"
 
   depends_on "prorab" => :build
   depends_on "prorab-extra" => :build
@@ -12,12 +12,11 @@ class Libtcpserver < Formula
 
   # use gmake here because otherwise homebrew uses default Mac's make which is of too old version 3.81
   def install
-    ENV['PATH'] += ':/usr/local/bin'
-    # install from src directory because tests require submodules
-    system "/usr/local/opt/make/libexec/gnubin/make", "--directory", "src", "install", "PREFIX=#{prefix}", "lint=off"
+    ENV['PATH'] += ":#{ENV['HOMEBREW_PREFIX']}/bin"
+    system "#{ENV['HOMEBREW_PREFIX']}/opt/make/libexec/gnubin/make", "--include-dir=#{ENV['HOMEBREW_PREFIX']}/include", "install", "PREFIX=#{prefix}", "lint=off"
   end
 
   test do
-    system "/usr/local/opt/make/libexec/gnubin/make", "test"
+    system "#{ENV['HOMEBREW_PREFIX']}/opt/make/libexec/gnubin/make", "--include-dir=#{ENV['HOMEBREW_PREFIX']}/include", "test"
   end
 end
