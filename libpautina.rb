@@ -1,8 +1,8 @@
 class Libpautina < Formula
   desc "HTTP service C++ library."
   homepage "https://github.com/cppfw/pautina"
-  url "https://github.com/cppfw/pautina/archive/0.1.8.tar.gz"
-  sha256 "ee5aacca16d9841b7e90d616d0c76df7b970c89f4b1c2732871994aac03f6914"
+  url "https://github.com/cppfw/pautina/archive/0.1.9.tar.gz"
+  sha256 "3a9671c89d77fd5d97aa33ace38fa709310a042886add19ef7c8830cb011134b"
 
   depends_on "prorab" => :build
   depends_on "prorab-extra" => :build
@@ -12,12 +12,11 @@ class Libpautina < Formula
 
   # use gmake here because otherwise homebrew uses default Mac's make which is of too old version 3.81
   def install
-    ENV['PATH'] += ':/usr/local/bin'
-    # install from src directory because tests require submodules
-    system "/usr/local/opt/make/libexec/gnubin/make", "--directory", "src", "install", "PREFIX=#{prefix}", "lint=off"
+    ENV['PATH'] += ":#{ENV['HOMEBREW_PREFIX']}/bin"
+    system "#{ENV['HOMEBREW_PREFIX']}/opt/make/libexec/gnubin/make", "--include-dir=#{ENV['HOMEBREW_PREFIX']}/include", "install", "PREFIX=#{prefix}", "lint=off"
   end
 
   test do
-    system "/usr/local/opt/make/libexec/gnubin/make", "test"
+    system "#{ENV['HOMEBREW_PREFIX']}/opt/make/libexec/gnubin/make", "--include-dir=#{ENV['HOMEBREW_PREFIX']}/include", "test"
   end
 end
