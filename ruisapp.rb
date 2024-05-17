@@ -1,8 +1,8 @@
 class Ruisapp < Formula
   desc "Intrusive C++ cross-platform OpenGL based GUI library."
   homepage "https://github.com/cppfw/ruisapp"
-  url "https://github.com/cppfw/ruisapp/archive/0.2.97.tar.gz"
-  sha256 "28328a4fc98931dded33e6d0c75397d4a740b5e20272d0c22b7d3d417eede78c"
+  url "https://github.com/cppfw/ruisapp/archive/0.2.99.tar.gz"
+  sha256 "6ac2f0d6590348c5fa54f7f9e84a225ef4c167ac31d6b14eb6c749818bac2c6b"
 
   depends_on "prorab" => :build
   depends_on "prorab-extra" => :build
@@ -17,11 +17,11 @@ class Ruisapp < Formula
 
   # use gmake here because otherwise homebrew uses default Mac's make which is of too old version 3.81
   def install
-    ENV['PATH'] += ':/usr/local/bin'
-    system "/usr/local/opt/make/libexec/gnubin/make", "install", "PREFIX=#{prefix}"
+    ENV['PATH'] += ":#{ENV['HOMEBREW_PREFIX']}/bin"
+    system "#{ENV['HOMEBREW_PREFIX']}/opt/make/libexec/gnubin/make", "--include-dir=#{ENV['HOMEBREW_PREFIX']}/include", "install", "PREFIX=#{prefix}", "lint=off"
   end
 
   test do
-    system "/usr/local/opt/make/libexec/gnubin/make", "test"
+    system "#{ENV['HOMEBREW_PREFIX']}/opt/make/libexec/gnubin/make", "--include-dir=#{ENV['HOMEBREW_PREFIX']}/include", "test"
   end
 end
