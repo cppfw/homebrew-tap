@@ -1,8 +1,8 @@
 class Libruis < Formula
   desc "C++ cross-platform OpenGL based GUI library."
   homepage "https://github.com/cppfw/ruis"
-  url "https://github.com/cppfw/ruis/archive/0.5.224.tar.gz"
-  sha256 "d46026623f5b0fa9a3350a2ba71d025f278bb08ff57094cbe1bd350d10274ed9"
+  url "https://github.com/cppfw/ruis/archive/0.5.227.tar.gz"
+  sha256 "05e326632335a50ab7ceb38b8d399de13d7573d167e1b3f85185d0c6573336a9"
 
   depends_on "prorab" => :build
   depends_on "prorab-extra" => :build
@@ -22,11 +22,11 @@ class Libruis < Formula
   
   # use gmake here because otherwise homebrew uses default Mac's make which is of too old version 3.81
   def install
-    ENV['PATH'] += ':/usr/local/bin'
-    system "/usr/local/opt/make/libexec/gnubin/make", "install", "PREFIX=#{prefix}"
+    ENV['PATH'] += ":#{ENV['HOMEBREW_PREFIX']}/bin"
+    system "#{ENV['HOMEBREW_PREFIX']}/opt/make/libexec/gnubin/make", "--include-dir=#{ENV['HOMEBREW_PREFIX']}/include", "install", "PREFIX=#{prefix}", "lint=off"
   end
 
   test do
-    system "/usr/local/opt/make/libexec/gnubin/make", "test"
+    system "#{ENV['HOMEBREW_PREFIX']}/opt/make/libexec/gnubin/make", "--include-dir=#{ENV['HOMEBREW_PREFIX']}/include", "test"
   end
 end
