@@ -1,8 +1,8 @@
 class LibruisRenderOpengl < Formula
   desc "OpenGl renderer for ruis GUI library."
   homepage "https://github.com/cppfw/ruis-render-opengl"
-  url "https://github.com/cppfw/ruis-render-opengl/archive/0.1.72.tar.gz"
-  sha256 "379368ca4d8f1ad0d9a8c91263ddad50d25b619535ec40d1a37c6c95f009ad83"
+  url "https://github.com/cppfw/ruis-render-opengl/archive/0.1.75.tar.gz"
+  sha256 "9ac683e0a8947baa45511242d4af1af47701b2df5adbb0d0e9d9441aaa53e4e8"
 
   depends_on "prorab" => :build
   depends_on "prorab-extra" => :build
@@ -12,11 +12,11 @@ class LibruisRenderOpengl < Formula
 
   # use gmake here because otherwise homebrew uses default Mac's make which is of too old version 3.81
   def install
-    ENV['PATH'] += ':/usr/local/bin'
-    system "/usr/local/opt/make/libexec/gnubin/make", "install", "PREFIX=#{prefix}"
+    ENV['PATH'] += ":#{ENV['HOMEBREW_PREFIX']}/bin"
+    system "#{ENV['HOMEBREW_PREFIX']}/opt/make/libexec/gnubin/make", "--include-dir=#{ENV['HOMEBREW_PREFIX']}/include", "install", "PREFIX=#{prefix}", "lint=off"
   end
 
   test do
-    system "/usr/local/opt/make/libexec/gnubin/make", "test"
+    system "#{ENV['HOMEBREW_PREFIX']}/opt/make/libexec/gnubin/make", "--include-dir=#{ENV['HOMEBREW_PREFIX']}/include", "test"
   end
 end
