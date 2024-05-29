@@ -1,8 +1,8 @@
 class Prorab < Formula
   desc "GNU make based build system."
   homepage "https://github.com/cppfw/prorab"
-  url "https://github.com/cppfw/prorab/archive/2.0.25.tar.gz"
-  sha256 "0159e8a6c0ff3cc3c437acf3efbfa0c821ae6f06277480bf10f9056a083ab470"
+  url "https://github.com/cppfw/prorab/archive/2.0.26.tar.gz"
+  sha256 "28bec6b2b89c44a170695edfa4c9c9d55fd8615fb54d25c856073813a60bf693"
 
   depends_on "dos2unix" => :build
   depends_on "make"
