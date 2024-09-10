@@ -1,8 +1,8 @@
 class LibruisRenderNull < Formula
   desc "OpenGl renderer for ruis GUI library."
   homepage "https://github.com/cppfw/ruis-render-null"
-  url "https://github.com/cppfw/ruis-render-null/archive/0.0.3.tar.gz"
-  sha256 "a830fc89a73c8f3e6c11570e37ac72f8c3204f148f11e756996f23e098a9e739"
+  url "https://github.com/cppfw/ruis-render-null/archive/0.0.4.tar.gz"
+  sha256 "650d0acd9fa490a86791a6bae6c64d611d48626c85994bad612cdd193e2578d0"
 
   depends_on "prorab" => :build
   depends_on "prorab-extra" => :build
