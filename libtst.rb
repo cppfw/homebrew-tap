@@ -1,13 +1,13 @@
 class Libtst < Formula
   desc "C++ testing framework."
   homepage "https://github.com/cppfw/tst"
-  url "https://github.com/cppfw/tst/archive/0.3.43.tar.gz"
-  sha256 "f8847be5c1c4e87a0d77bf35f2b5e375f8ea588a13f5d3b0851b5f473a9bbb99"
+  url "https://github.com/cppfw/tst/archive/0.3.44.tar.gz"
+  sha256 "2e15578389246599f6e4f93e5270448afe8a0c67c7c5c42893bd84a5ee494f70"
 
   depends_on "prorab" => :build
   depends_on "prorab-extra" => :build
   depends_on "myci" => :build
-  depends_on "pkg-config" => :build
+  depends_on "pkgconf" => :build # NOTE: 'pkg-config' formula is deprecated
   depends_on "libnitki" => :build
   depends_on "libutki"
   depends_on "libclargs"
