@@ -1,8 +1,8 @@
 class Libmikroxml < Formula
   desc "C++ cross-platform XML parser library."
   homepage "https://github.com/cppfw/mikroxml"
-  url "https://github.com/cppfw/mikroxml/archive/0.1.67.tar.gz"
-  sha256 "1409d6666d98553170b5ea2ed3ce3658a8f0a938b65b328df3e5c274d236b821"
+  url "https://github.com/cppfw/mikroxml/archive/0.1.68.tar.gz"
+  sha256 "be9791f9c7108fdc57442eb2fe4de8d69abe8a0529487677e813cc06aef131eb"
 
   depends_on "prorab" => :build
   depends_on "pkg-config" => :build
