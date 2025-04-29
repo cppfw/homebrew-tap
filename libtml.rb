@@ -1,8 +1,8 @@
 class Libtml < Formula
   desc "C++ cross-platform tml parser library."
   homepage "https://github.com/cppfw/tml"
-  url "https://github.com/cppfw/tml/archive/0.2.23.tar.gz"
-  sha256 "3596b1f5fb23d313c895f19c2ef4167951c1ba9c95b1801f6beb37ce287d6c65"
+  url "https://github.com/cppfw/tml/archive/0.2.24.tar.gz"
+  sha256 "2ed7c038868b67f9a11f10cb0235295b025a632e408ee01a1cf6fc940e91a0c6"
 
   depends_on "prorab" => :build
   depends_on "libclargs" => :build
