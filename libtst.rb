@@ -1,8 +1,8 @@
 class Libtst < Formula
   desc "C++ testing framework."
   homepage "https://github.com/cppfw/tst"
-  url "https://github.com/cppfw/tst/archive/0.3.45.tar.gz"
-  sha256 "1bd2c7ab8902582937c0ed0e955598f383ee7d3f0279a05fc0dd8ab4fae33e6d"
+  url "https://github.com/cppfw/tst/archive/0.3.46.tar.gz"
+  sha256 "b8ae885b0616f93ec254c8a21ce144a023629358aaa4a63374d6d6c991e5a281"
 
   depends_on "prorab" => :build
   depends_on "prorab-extra" => :build
