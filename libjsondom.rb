@@ -1,8 +1,8 @@
 class Libjsondom < Formula
   desc "C++ cross-platform JSON DOM library."
   homepage "https://github.com/cppfw/jsondom"
-  url "https://github.com/cppfw/jsondom/archive/0.1.31.tar.gz"
-  sha256 "a80b02257662a47ccc25dcff84ecfb2f927567e8e4386854fbe2bd441aad5dba"
+  url "https://github.com/cppfw/jsondom/archive/0.1.32.tar.gz"
+  sha256 "f92166551b3274f96910e060c5b4875457300511917d69e9f3c439e184c49ffc"
 
   depends_on "prorab" => :build
   depends_on "prorab-extra" => :build
