@@ -1,8 +1,8 @@
 class Myci < Formula
   desc "Helper CI scripts."
   homepage "https://github.com/cppfw/myci"
-  url "https://github.com/cppfw/myci/archive/0.1.190.tar.gz"
-  sha256 "18c8d7d705783ac1162223574e37ac573150f86d35768cbd36d929a7a2ca42d7"
+  url "https://github.com/cppfw/myci/archive/0.1.191.tar.gz"
+  sha256 "2719e50daa95092b5b743319b106368514fec6befd95a19ce354401e10a810f3"
 
   depends_on "md5sha1sum"
   depends_on "curl"
