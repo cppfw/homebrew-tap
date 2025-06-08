@@ -1,8 +1,8 @@
 class Libnitki < Formula
   desc "C++ cross-platform threading library."
   homepage "https://github.com/cppfw/nitki"
-  url "https://github.com/cppfw/nitki/archive/1.0.93.tar.gz"
-  sha256 "25a10e14993353d3d03c5643b1719aa69565552f1ba5f98a5e43ae002bea815b"
+  url "https://github.com/cppfw/nitki/archive/1.0.94.tar.gz"
+  sha256 "a042eefa009c6be6bcf8e50499f8f2fc13ea8ce6f382cdb8bdcd8d0827aad000"
 
   depends_on "prorab" => :build
   depends_on "libopros"
