@@ -1,8 +1,8 @@
 class Libsvgdom < Formula
   desc "C++ cross-platform SVG DOM library."
   homepage "https://github.com/cppfw/svgdom"
-  url "https://github.com/cppfw/svgdom/archive/0.4.30.tar.gz"
-  sha256 "48a7a46b314ef1cf3e03ef42a137dc3e93e08b7fa9186529222ed4dfa5a8a4b9"
+  url "https://github.com/cppfw/svgdom/archive/0.4.31.tar.gz"
+  sha256 "492ad3f32e17660d1c1a8f33a5176a0c4e70ec2cb4ebd17d998040e65cc46a66"
 
   depends_on "prorab" => :build
   depends_on "prorab-extra" => :build
