@@ -1,8 +1,8 @@
 class Libclargs < Formula
   desc "C++ cross-platform library for parsing command line arguments."
   homepage "https://github.com/cppfw/clargs"
-  url "https://github.com/cppfw/clargs/archive/0.2.70.tar.gz"
-  sha256 "762d64d43478fb986c1eb052c036aa596976adb4e0fbfa6a8c937d463580cc0e"
+  url "https://github.com/cppfw/clargs/archive/0.2.71.tar.gz"
+  sha256 "0207d1a71b7757fd563540ec2cafc3db57289b48791ade357aa576323deb2a3e"
 
   depends_on "prorab" => :build
   depends_on "prorab-extra" => :build
