@@ -1,8 +1,8 @@
 class Liburlmodel < Formula
   desc "URL model C++ library."
   homepage "https://github.com/cppfw/urlmodel"
-  url "https://github.com/cppfw/urlmodel/archive/0.1.9.tar.gz"
-  sha256 "cf373fce89dbc0be9013ce52a0afde5185adafa86cc559d1e33fd0f5aa228f7f"
+  url "https://github.com/cppfw/urlmodel/archive/0.1.10.tar.gz"
+  sha256 "6a1800c243e04ffb0ca4614d042982c2a2f42366479bd814b3df0e17116cc9fb"
 
   depends_on "prorab" => :build
   depends_on "prorab-extra" => :build
