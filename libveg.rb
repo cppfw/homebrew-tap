@@ -1,8 +1,8 @@
 class Libveg < Formula
   desc "C++ cross-platform vector graphics library."
   homepage "https://github.com/cppfw/veg"
-  url "https://github.com/cppfw/veg/archive/0.1.11.tar.gz"
-  sha256 "b7bec983d42c97ec543731f800198f5e09220275beab85c5056bbb2b230b7786"
+  url "https://github.com/cppfw/veg/archive/0.1.12.tar.gz"
+  sha256 "28294c4498636d364151c461b88731227d63456f1bedd48165252de7bbe19f28"
 
   depends_on "prorab" => :build
   depends_on "prorab-extra" => :build
