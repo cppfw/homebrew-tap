@@ -1,8 +1,8 @@
 class Libruis < Formula
   desc "C++ cross-platform GUI library."
   homepage "https://github.com/cppfw/ruis"
-  url "https://github.com/cppfw/ruis/archive/0.6.1.tar.gz"
-  sha256 "1e3c04ba313dd0dec494a4d33f74e8ed124f1956a1e19df71769fd74749f2f2a"
+  url "https://github.com/cppfw/ruis/archive/0.6.2.tar.gz"
+  sha256 "e074d3b5f36ddb653373869624db7574ba0e48ce4f9296c4faa0ade318489aed"
 
   depends_on "prorab" => :build
   depends_on "prorab-extra" => :build
