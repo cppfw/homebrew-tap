@@ -1,8 +1,8 @@
 class Librasterimage < Formula
   desc "C++ cross-platform SVG rendering library."
   homepage "https://github.com/igagis/rasterimage"
-  url "https://github.com/igagis/rasterimage/archive/0.1.38.tar.gz"
-  sha256 "91d90f2e9df6653d1dc985620fb243fa9db529d44ad2c0f90a8e8db486a6747d"
+  url "https://github.com/igagis/rasterimage/archive/0.1.39.tar.gz"
+  sha256 "14f7319f9e4eb482c46e0cddf9d39a480c910b58df8e49b75a9904876af992f8"
 
   depends_on "prorab" => :build
   depends_on "prorab-extra" => :build
@@ -11,7 +11,7 @@ class Librasterimage < Formula
   depends_on "libpng"
   depends_on "jpeg"
   depends_on "libutki"
-  depends_on "libpapki"
+  depends_on "libfsif"
   depends_on "libr4"
 
   # use gmake here because otherwise homebrew uses default Mac's make which is of too old version 3.81
