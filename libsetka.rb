@@ -1,8 +1,8 @@
 class Libsetka < Formula
   desc "C++ cross-platform network library."
   homepage "https://github.com/cppfw/setka"
-  url "https://github.com/cppfw/setka/archive/1.0.41.tar.gz"
-  sha256 "567e3b81b605ea122816ccfffd9a4338c4bb5b8cecf7b61cdd19e12f3b6bb861"
+  url "https://github.com/cppfw/setka/archive/1.0.42.tar.gz"
+  sha256 "43cf8856489870b0a882107f620240a76576abeed93ef53a6f2ce10f47da5286"
 
   depends_on "prorab" => :build
   depends_on "prorab-extra" => :build
@@ -10,7 +10,7 @@ class Libsetka < Formula
   depends_on "libnitki"
   depends_on "libopros"
   depends_on "libutki"
-  depends_on "libpapki"
+  depends_on "libfsif"
 
   # use gmake here because otherwise homebrew uses default Mac's make which is of too old version 3.81
   def install
