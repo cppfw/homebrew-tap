@@ -1,8 +1,8 @@
 class Libfsif < Formula
   desc "C++ cross-platform file system library."
   homepage "https://github.com/cppfw/fsif"
-  url "https://github.com/cppfw/fsif/archive/1.0.158.tar.gz"
-  sha256 "6fa750016d4fbd56ac2f4d9b17b481f5522c1eb8e091e2d31e0de7afb0469cf9"
+  url "https://github.com/cppfw/fsif/archive/1.0.159.tar.gz"
+  sha256 "77d0ab888f1d07577729d9ade799adc648a62ef000b1f06de5549c21b3a23b5e"
 
   depends_on "prorab" => :build
   depends_on "libutki"
