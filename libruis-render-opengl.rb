@@ -1,8 +1,8 @@
 class LibruisRenderOpengl < Formula
   desc "OpenGl renderer for ruis GUI library."
   homepage "https://github.com/cppfw/ruis-render-opengl"
-  url "https://github.com/cppfw/ruis-render-opengl/archive/0.3.4.tar.gz"
-  sha256 "26b7647df4173e38ee2e5e9f04a1d48ca4a93e05108f0102dafe578ce15f0fbf"
+  url "https://github.com/cppfw/ruis-render-opengl/archive/0.3.5.tar.gz"
+  sha256 "b57974a700b236fada9ad1dfe26661256b9c179ba29243dd05a9ec87a57783ef"
 
   depends_on "prorab" => :build
   depends_on "prorab-extra" => :build
