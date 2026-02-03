@@ -1,8 +1,8 @@
 class Ruisapp < Formula
   desc "Intrusive C++ cross-platform OpenGL based GUI library."
   homepage "https://github.com/cppfw/ruisapp"
-  url "https://github.com/cppfw/ruisapp/archive/0.2.133.tar.gz"
-  sha256 "406372756136a97788c200edd9828d537668f915b3e010d93217bde870a85aa2"
+  url "https://github.com/cppfw/ruisapp/archive/0.2.134.tar.gz"
+  sha256 "ea45d5e2eb9cd13853d78e2bbc336d62f67429769dfec74d77bb74e15b876cd0"
 
   depends_on "prorab" => :build
   depends_on "prorab-extra" => :build
