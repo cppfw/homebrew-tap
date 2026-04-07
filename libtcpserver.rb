@@ -1,8 +1,8 @@
 class Libtcpserver < Formula
   desc "HTTP service C++ library."
   homepage "https://github.com/cppfw/tcpserver"
-  url "https://github.com/cppfw/tcpserver/archive/0.1.8.tar.gz"
-  sha256 "11fa3a7e7fc5f8dd393ca94625e331b519af9fd9dc7c3aef9352aea02384c829"
+  url "https://github.com/cppfw/tcpserver/archive/0.1.9.tar.gz"
+  sha256 "946ceec7f0aaec044dc68cc0b9c5a7138e815233fb96563e1028ee8a76cbc66a"
 
   depends_on "prorab" => :build
   depends_on "prorab-extra" => :build
