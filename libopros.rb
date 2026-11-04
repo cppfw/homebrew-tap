@@ -1,8 +1,8 @@
 class Libopros < Formula
   desc "C++ cross-platform event waiting library."
   homepage "https://github.com/cppfw/opros"
-  url "https://github.com/cppfw/opros/archive/1.0.109.tar.gz"
-  sha256 "ea1536d30e9446464439b0fe950a42cdefb9f8a5c4405ad6419ea0bb0399c17d"
+  url "https://github.com/cppfw/opros/archive/1.0.110.tar.gz"
+  sha256 "9763b93a2f5a322fd4d6a7925f9d5a147b8b31fc0559cb508d6e86d44122ab3c"
 
   depends_on "prorab" => :build
   depends_on "prorab-extra" => :build
