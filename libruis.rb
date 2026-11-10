@@ -1,8 +1,8 @@
 class Libruis < Formula
   desc "C++ cross-platform GUI library."
   homepage "https://github.com/cppfw/ruis"
-  url "https://github.com/cppfw/ruis/archive/0.6.24.tar.gz"
-  sha256 "57f7ab62c26cc1a45b08974b29ac3e18d1d9b911236c298eb3df9e284700ebe7"
+  url "https://github.com/cppfw/ruis/archive/0.6.25.tar.gz"
+  sha256 "a097afffa41a143341fedb1b25a4761bde08a2782709b1d9121dc5a34ab59d4d"
 
   depends_on "prorab" => :build
   depends_on "prorab-extra" => :build
@@ -19,6 +19,7 @@ class Libruis < Formula
   depends_on "libr4"
   depends_on "libsvgdom"
   depends_on "libsvgren"
+  depends_on "libsetka"
   
   # use gmake here because otherwise homebrew uses default Mac's make which is of too old version 3.81
   def install
