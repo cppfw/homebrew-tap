@@ -1,8 +1,8 @@
 class LibruisRenderVulkan < Formula
   desc "Vulkan renderer for ruis GUI library."
   homepage "https://github.com/cppfw/ruis-render-vulkan"
-  url "https://github.com/cppfw/ruis-render-vulkan/archive/0.0.2.tar.gz"
-  sha256 "01b7c36aaf22e9cf66dd528c8976988b896a3f593f5b2416cc840cbd09cf83dc"
+  url "https://github.com/cppfw/ruis-render-vulkan/archive/0.0.3.tar.gz"
+  sha256 "161453523e48342e22233834a63a117f775c7413ec8bce2b83cf88e460188f88"
 
   depends_on "prorab" => :build
   depends_on "prorab-extra" => :build
